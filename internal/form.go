@@ -1,4 +1,4 @@
-package form
+package internal
 
 import (
 	"log"

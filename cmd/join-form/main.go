@@ -1,9 +1,9 @@
 package main
 
 import (
-	"git.sr.ht/~alias/join-form/form"
+	. "git.sr.ht/~alias/join-form/internal"
 )
 
 func main() {
-	form.DisplayForm()
+	DisplayForm()
 }
