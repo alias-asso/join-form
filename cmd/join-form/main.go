@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	DisplayForm()
+	StartServer()
 }
