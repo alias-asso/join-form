@@ -49,11 +49,12 @@ func FormHandler(s ssh.Session) (tea.Model, []tea.ProgramOption) {
 		),
 	)
 
-	return Model{form}, []tea.ProgramOption{tea.WithAltScreen()}
+	return Model{form, false}, []tea.ProgramOption{tea.WithAltScreen()}
 }
 
 type Model struct {
-	form *huh.Form // huh.Form is just a tea.Model
+	form      *huh.Form // huh.Form is just a tea.Model
+	submitted bool
 }
 
 func (m Model) Init() tea.Cmd {
@@ -61,7 +62,12 @@ func (m Model) Init() tea.Cmd {
 }
 
 func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-	// ...
+	switch msg := msg.(type) {
+	case tea.KeyMsg:
+		if msg.String() == "q" {
+			return m, tea.Quit
+		}
+	}
 
 	form, cmd := m.form.Update(msg)
 	if f, ok := form.(*huh.Form); ok {

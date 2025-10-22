@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "git.sr.ht/~alias/join-form/internal"
+	. "github.com/alias-asso/join-form/internal"
 )
 
 func main() {
