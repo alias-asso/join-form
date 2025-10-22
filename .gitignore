@@ -1,2 +1,3 @@
-join-form
-.env
+join-form-daemon
+join-form-results
+.ssh
