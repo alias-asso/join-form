@@ -21,7 +21,7 @@ func FormHandler(s ssh.Session) (tea.Model, []tea.ProgramOption) {
 		huh.NewGroup(
 			huh.NewNote().
 				Title("Bienvenue sur Augustine").
-				Description("Salut, je suis *Galias* !\nJ'ai développé une technologie pour te parler à travers ce terminal.\nJe vais t'assister dans la création de ton compte\nsur augustine, notre serveur. Ce compte te sera utile pour\naccéder à nos différents services, comme par exemple Polybase."),
+				Description("Salut, je suis *Galias* !\nJ'ai développé une technologie pour te parler à travers ce terminal.\nJe vais t'assister dans la création de ton **compte ALIAS**, notre serveur. Ce compte te sera utile pour\naccéder à nos différents services, comme par exemple Polybase."),
 		),
 		huh.NewGroup(
 			huh.NewInput().Title("Quel est ton nom complet ?").Value(&name),
